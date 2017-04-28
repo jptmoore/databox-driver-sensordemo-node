@@ -1,11 +1,10 @@
 FROM node:alpine
 
-COPY . .
+ADD . .
 RUN npm install
 
-LABEL databox.type="app"
+LABEL databox.type="driver"
 
 EXPOSE 8080
 
 CMD ["npm","start"]
-#CMD ["sleep","2147483647"]

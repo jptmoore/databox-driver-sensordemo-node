@@ -1,38 +1,37 @@
 {
 	"manifest-version": 1,
 
-	"name": "databox-app-sensordemo-node",
-	"databox-type": "app",
+	"name": "databox-driver-sensordemo-node",
+	"databox-type": "driver",
 	"version": "0.1.0",
 
-	"description": "A sensor network demo Databox app in Node.js",
+	"description": "A demo sensor network Databox driver in Node.js",
 	"author": "John Moore <jmoore@zedstar.org>",
 	"license": "MIT",
 	"tags": [
 		"sensor",
-		"app",
+		"driver",
+		"mock",
 		"nodejs"
 	],
 
-	"homepage": "https://github.com/me-box/databox-app-sensordemo-node",
+	"homepage": "https://github.com/me-box/databox-driver-sensordemo-node",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/me-box/databox-app-sensordemo-node"
+		"url": "git+https://github.com/me-box/databox-driver-sensordemo-node"
 	},
 
 	"packages": [
 		{
-			"name": "Store read",
+			"name": "Store write",
 			"purpose": "",
 			"install": "required",
-			"risks": "",
+			"risk": "",
 			"benefits": "",
 			"datastores": [ "test" ]
 		}
 	],
-
 	"allowed-combinations": [],
-
 	"datasources": [
 		{
 			"type": "test",
@@ -44,7 +43,6 @@
 	],
 
 	"resource-requirements": {
-                "store": "databox-store-blob"
-        }
-
+		"store": "databox-store-blob"
+	}
 }

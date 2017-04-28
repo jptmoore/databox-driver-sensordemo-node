@@ -1,30 +1,27 @@
 {
-  "name": "databox-app-sensordemo-node",
+  "name": "databox-driver-sensordemo-node",
   "version": "0.1.0",
-  "description": "A sensor network demo Databox app in Node.js",
-  "config": {
-    "databox-registry": "localhost:5000"
-  },
+  "description": "A sensor network Databox driver in Node.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "docker build -t $npm_package_name .",
-    "release": "docker tag $npm_package_name $npm_package_config_databox_registry/$npm_package_name && docker push $npm_package_config_databox_registry/$npm_package_name"
+    "start": "node main.js",
+    "publish": "docker build -t databox-driver-sensordemo-node . && docker tag databox-driver-sensordemo-node localhost:5000/databox-driver-sensordemo-node && docker push localhost:5000/databox-driver-sensordemo-node"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/me-box/databox-app-sensordemo-node.git"
+    "url": "git+https://github.com/jptmoore/databox-driver-sensordemo-node.git"
   },
   "keywords": [
     "sensor",
-    "app",
+    "driver",
+    "mock",
     "nodejs"
   ],
   "author": "John Moore <jmoore@zedstar.org>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/me-box/databox-app-sensordemo-node/issues"
+    "url": "https://github.com/jptmoore/databox-driver-sensordemo-node/issues"
   },
-  "homepage": "https://github.com/me-box/databox-app-sensordemo-node#readme",
+  "homepage": "https://github.com/jptmoore/databox-driver-sensordemo-node#readme",
   "dependencies": {
     "node-databox": "^0.3.0"
   }
