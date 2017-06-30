@@ -3,7 +3,7 @@ var PubNub = require('pubnub');
 
 var databox = require('node-databox');
 
-var store = process.env.DATABOX_DRIVER_SENSORDEMO_NODE_DATABOX_STORE_BLOB_ENDPOINT;
+var store = process.env.DATABOX_STORE_ENDPOINT;
 
 function subscribe() {
    
